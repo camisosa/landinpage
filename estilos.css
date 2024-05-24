@@ -1,0 +1,308 @@
+html {
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth; /* Esta línea hace que el desplazamiento sea suave */
+}
+
+body {
+   margin: 0; padding: 0;
+}
+
+h1{
+    font-size: 60px;
+    margin-bottom: 15px;    
+}
+
+h2{
+    font-size: 40px;  
+}
+
+h3{
+    font-size: 22px;
+    margin-top: 0;   
+    margin-bottom: 0;    
+}
+
+.destacado {
+    color: red;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+header {
+    background-color: #161616;
+    padding: 10px 30px; /*Espadio arriba, abajo y a los costados (interno)*/
+    margin: 0;
+}
+
+.logo {
+    max-width: 160px;
+}
+
+.portada {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.897)), url('imagen/Joystick.png');  
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.encabezado{
+    color: white; /* texto */
+    text-align: center; /* Centra el texto */
+    justify-content: center; /* Centra verticalmente el contenido */
+    padding: 90px 140px;
+}
+
+.titulos-encabezado {
+    margin-bottom: 40px;    
+}
+
+.subtitulo {
+ color: #C9CACC;
+ padding: 0 187px;
+ font-size: 20px;
+}
+  
+.boton-rojo{
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: red; 
+    font-weight: bold;
+    color: white; 
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    border: none; 
+    border-radius: 60px; /* Bordes redondeados */
+    font-size: 23px;     
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.boton-rojo:hover {
+    background-color: #cc0000;
+}
+
+.Beneficios{
+    background-color: white;
+    color: #161616;   
+    display: flex; /*Pone uno al lado del otro (dentro de la lista)*/    
+    padding: 60px 133px;
+}
+
+.info{
+    margin: 0 20px;
+}
+
+.info ul{
+    font-size: 20;
+}
+
+.info li{
+    list-style-image: url("imagen/check 3.0.png");
+    margin-top: 20px;
+}
+
+.info-complementaria{
+padding: 35px 20px;
+}
+
+.Bullets{
+    background-color: #161616;
+    padding: 60px 133px;
+    color: white;
+} 
+
+.Bullets h3{
+    margin-top: 16;    
+}
+
+.Contenedor-Tarjetas {
+color: white;
+display: flex;
+}
+
+.Tarjeta {
+    text-align: center;
+    margin: 30px ;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+}
+
+.Tarjeta img {
+    width: auto;
+    height: 30px;
+    padding: 0;
+}
+
+/* Estilo para las líneas verticales */
+.Tarjeta:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 330px;
+    width: 0.3px; /* Grosor de la línea */
+    height: 100%;    
+    justify-content: center; /* Centra verticalmente el contenido */
+    background-color: rgba(255, 255, 255, 0.301); /* Color de la línea */
+}
+
+.Comunidad{
+padding: 60px 133px;
+background-color: white;
+color: #161616;
+}
+
+.contenedor-comentarios {
+    columns: 2;
+    column-gap: 107px; /* Espacio entre columnas */
+}
+
+.comentario {
+    display: flex;
+    width: 450px;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative; /* Añadir position: relative */
+}
+
+.foto-coment img {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+}
+
+.name-tittle {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name-tittle h3 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.img-puntaje {
+    width: 27px;
+    height: 27px;
+    margin-left: 10px;
+}
+
+.coment-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.coment-text p{
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+}
+
+.fecha-hora {
+    display: flex;
+}
+
+.fecha-hora p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.fecha-hora img {
+    width: 11px;
+    height: 11px;
+    margin-right: 6px;
+    margin-left: 0;
+}
+
+.comentario::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px; /* Ajusta esta propiedad para espaciar la línea */
+    width: 100%;
+    height: 1px; /* Grosor de la línea */
+    background-color: rgba(0, 0, 0, 0.178); /* Color de la línea */
+}
+
+.Formulario{
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.897)), url('imagen/Joystick.png');  
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    color: white;
+} 
+
+.form-conten{
+    text-align: center;
+    padding: 60px 150px;
+}
+
+.titulo-form{
+    height: auto;
+}
+
+.form-group{
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+
+#email {
+    width: 70%;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+footer {
+    background-color: #161616;
+    color: white;
+    text-align: center; /* Centra el texto */
+    padding: 40px 0 5px; /* Ajusta el padding */
+}
+
+.medios {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.medios p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.icons {
+    display: flex;
+    gap: 45px; /* Espacio entre iconos */
+    padding-left: 30px;
+}
+
+.icon-media {
+    width: 40px;
+    height: auto; /* Mantener la proporción */
+}
+
+
+h1, h2, h4, h5, h6 {
+    font-family: "Roboto Condensed", sans-serif;    
+    font-weight: bold;
+}
+
+/* @media screen and (max-width: 600px) { ESTO ES PARA HACER RESPONSIVE UN SITIO, EJERCICIO 2 EXPLICA
+    html, body{
+    }
