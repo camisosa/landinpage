@@ -7,31 +7,22 @@ body {
    background-color: black;
 }
 
-h1{
-    font-size: 60px;
-    margin-bottom: 15px;    
-}
-
-h2{
+h1, h2, h3{
     font-family: "Roboto Condensed", sans-serif;    
-    font-size: 40px;  
-    font-weight: bold;
+    font-weight: bold;    
+    margin: 0;
+    padding: 0;
 }
 
-h3{
-    font-size: 22px;
-    margin-top: 0;   
-    margin-bottom: 0;    
+p{
+    font-family: "DM Sans", sans-serif;    
+    margin: 0;
+    padding: 0;
 }
 
 .destacado {
     color: red;
     font-size: 15px;
-    font-family: "DM Sans", sans-serif;
-}
-
-.negrita {
-    font-weight: bold;
 }
 
 header {
@@ -69,13 +60,14 @@ form{
     margin: 0 120px;
 }
 
-.izquierdo .contenedor-principal p{
-    font-family: "DM Sans", sans-serif;
-    font-size: 20px;
+.izquierdo .contenedor-principal h2{
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.izquierdo .contenedor-principal .destacado{
-    margin-top: 40px;
+.izquierdo .contenedor-principal p{
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 .derecho{
@@ -85,32 +77,21 @@ form{
     border-bottom-left-radius: 25px;
 }
 
-form{
-    display: flex;
-    padding: 0 0;
-}
-
-.obligatorio{
-    color: red;
-    font-size: 14px;
-}
-
 .derecho .contenedor-principal{
-    margin: 36px 30px;
+    padding: 36px 30px;
 }
 
 .boton-cancelar {
-    margin-left: 610px;
+    margin-left: 620px;
     padding: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    color: white;
 }
 
 .boton-cancelar img {
-    width: 26px;
-    height: 26px;
+    width: 40%;
+    height: 40%;
 }
 
 .contenedor-camposdelform{    
@@ -133,7 +114,7 @@ form{
 }
 
 #email {
-    width: 290px;
+    width: 340px;
     padding: 13px 20px;
     border: 0.3px solid #00000048;
     border-radius: 50px;
@@ -171,8 +152,9 @@ select {
     background-image: url('/imagen/flechita.png');
     background-repeat: no-repeat;
     background-position: right 20px center;
-    background-size: 26px;
+    background-size: 4%;
 }
+
 /*FALTA ARREGLAR EL DESPLEGABLE*/
 .form-campo label {
     display: block;
@@ -226,7 +208,7 @@ select {
     content: '';
     position: absolute;
     left: 0;
-    top: -25px; /* Ajusta esta propiedad para espaciar la línea */
+    top: -15px; /* Ajusta esta propiedad para espaciar la línea */
     width: 100%;
     height: 1.5px; /* Grosor de la línea */
     background-color: rgba(0, 0, 0, 0.178); /* Color de la línea */
@@ -234,9 +216,7 @@ select {
 
 .cont-botonyderechos .destacado{
     font-size: 12px;
-    
 }
-
 
 
 /*DISEÑO DE PANTALLA DEL FEEDBACK*/
@@ -269,15 +249,16 @@ select {
     display: flex;
     margin-left: 35%;
 }
+.text-feelback{
+    margin: 15px 105px ;
+}
 
 .contenido h1{
-    margin-top: 15px;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
 }
 
 .contenido p{
-    padding: 0 105px;
     margin-top: 15px;
     font-size: 20px;
 }
@@ -290,7 +271,6 @@ select {
     color: red; 
     text-decoration:none;
     border: 1px solid red;
-    font-size: 16px; 
     cursor: pointer;    
     border-radius: 60px; /* Bordes redondeados */
     font-size: 23px;     
@@ -309,44 +289,227 @@ select {
 
 footer {
     background-color: #161616;
-    color: white; 
-    text-align: center; 
-    padding: 30px 0;
-    justify-content: center; 
-    padding-bottom: 5px;
-}
-   
-.icon-media{
-    width: 30px;
-    padding: 0 10px;
-}
-
-footer {
-    background-color: #161616;
-    color: white;
+    color: #F1F1F1;
     text-align: center; /* Centra el texto */
-    padding: 40px 0 5px; /* Ajusta el padding */
+    padding: 40px 0 10px; /* Ajusta el padding */
 }
 
 .medios {
+    margin-bottom: 30px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
 }
 
-.medios p {
+.medios h3 {
     font-size: 30px;
-    font-weight: bold;
-    font-family: "Roboto Condensed", sans-serif;
 }
 
 .icons {
     display: flex;
-    gap: 45px; /* Espacio entre iconos */
-    padding-left: 30px;
 }
 
 .icon-media {
     width: 40px;
+    margin-left: 45px;
     height: auto; /* Mantener la proporción */
+}
+
+@media screen and (max-width: 500px){
+
+    .destacado {
+        font-size: 15px;
+    }
+    
+    header {
+        padding: 16px 15px; /*Espadio arriba, abajo y a los costados (interno)*/
+        height: 3%;
+    }
+    
+    .logo {
+        max-width: 102px;
+    }
+    
+    form{
+        display: block;
+        margin: 0;
+    }
+    
+    .izquierdo, .derecho{
+        flex: 1;
+        margin: 0;
+    }
+
+    .izquierdo {
+        background-size: 120%; /* Ajusta el tamaño para acercar/alejar la imagen */
+        background-position: center 40%; /* Ajusta la posición según la parte deseada */
+        height: 30vh;
+        width: 100%;
+        padding: 0;
+    }   
+    .izquierdo .contenedor-principal{
+        text-align: left;
+        margin: 30px 16px;
+    }
+    
+    .izquierdo .contenedor-principal h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .izquierdo .contenedor-principal p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .derecho{
+        background-color: white;
+        background-position: bottom;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 0;
+        margin-top: 0;
+    }
+    
+    .derecho .contenedor-principal{
+        padding: 15px 16px;
+    }
+    
+    .boton-cancelar {
+        margin-left: 325px;
+    }
+    
+    .boton-cancelar img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contenedor-camposdelform{    
+        margin-top: 0;
+    }
+    
+    label{
+        font-size: 18px;
+    }
+    
+    .nombre-correo{
+        display: block;
+    }
+    
+    #nombre {
+        width: 90%;
+        padding: 15px 15px;
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    
+    #email {
+        width: 90%;
+        padding: 15px 15px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    #videojuego {
+        width: 100%;
+        padding: 15px 15px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    #plataforma {
+        width: 100%;
+        padding: 15px 15px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    select {
+        background-size: 7%;
+    }
+    /*FALTA ARREGLAR EL DESPLEGABLE*/
+    .form-campo label {
+        font-size: 18px;
+    }
+    
+    .enter {
+        margin: 0 41.5px 40px;
+        padding: 12px 65px;
+        font-size: 23px;
+        text-align: center; /* Asegura que el texto dentro del elemento esté centrado */
+    } 
+    
+    .cont-botonyderechos p{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .cont-botonyderechos .destacado{
+        font-size: 12px;
+    }
+    
+    
+    /*DISEÑO DE PANTALLA DEL FEEDBACK*/
+      
+    .contenido {
+        width: 80%; 
+        height: auto; 
+    }
+    
+    .dardo{
+        width: 80%;
+        display: flex;
+        margin-left: 40px;
+    }
+
+    .text-feelback{
+        margin: 20px 12px ;
+    }
+    
+    .contenido h1{
+        font-size: 25px;
+    }
+    
+    .contenido p{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .volver{
+        padding: 12px 86px;
+        font-size: 16px; 
+        margin-bottom: 40px;
+    }
+    
+     footer {
+        text-align: center; /* Centra el texto */
+        padding: 20px 53px 10px; /* Ajusta el padding */
+    }
+    
+    .medios {
+        margin-bottom: 30px;
+        display: block;
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+    }
+    
+    .medios h3 {
+        font-size: 20px;
+    }
+
+    .icons {
+        margin-top: 20px;
+    }
+
+    .icon-media {
+        width: 30px;
+        margin-left: 0;
+        margin: 0 20px;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+
 }
