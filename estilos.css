@@ -1,15 +1,24 @@
 html {
-    font-family: "DM Sans", sans-serif;
     scroll-behavior: smooth; /* Esta línea hace que el desplazamiento sea suave */
+   margin: 0; padding: 0;
+
 }
 
 body {
    margin: 0; padding: 0;
 }
 
-h1{
-    font-size: 60px;
-    margin-bottom: 15px;    
+h1, h2, h3{
+    font-family: "Roboto Condensed", sans-serif;    
+    font-weight: bold;    
+    margin: 0;
+    padding: 0;
+}
+
+p, li, h4{
+    font-family: "DM Sans", sans-serif;    
+    margin: 0;
+    padding: 0;
 }
 
 h2{
@@ -17,9 +26,7 @@ h2{
 }
 
 h3{
-    font-size: 22px;
-    margin-top: 0;   
-    margin-bottom: 0;    
+    font-size: 22px;   
 }
 
 .destacado {
@@ -50,20 +57,20 @@ header {
 }
 
 .encabezado{
-    color: white; /* texto */
     text-align: center; /* Centra el texto */
     justify-content: center; /* Centra verticalmente el contenido */
-    padding: 90px 140px;
+    margin: 181px 140px;
 }
 
-.titulos-encabezado {
-    margin-bottom: 40px;    
+.titulos-encabezado h1{
+    color: #F1F1F1;
+    font-size: 60px;
 }
 
-.subtitulo {
- color: #C9CACC;
- padding: 0 187px;
- font-size: 20px;
+.titulos-encabezado p{
+    color: #C9CACC;
+    margin: 15px 187px 30px;
+    font-size: 20px;
 }
   
 .boton-rojo{
@@ -71,7 +78,7 @@ header {
     padding: 12px 35px;
     background-color: red; 
     font-weight: bold;
-    color: white; 
+    color: #F1F1F1;
     text-decoration: none; /* Eliminar subrayado del enlace */
     border: none; 
     border-radius: 60px; /* Bordes redondeados */
@@ -86,16 +93,17 @@ header {
 .Beneficios{
     background-color: white;
     color: #161616;   
-    display: flex; /*Pone uno al lado del otro (dentro de la lista)*/    
+    display: flex;  
     padding: 60px 133px;
 }
 
 .info{
-    margin: 0 20px;
+    margin-right: 20px;
 }
 
 .info ul{
     font-size: 20;
+    margin-top: 33px;
 }
 
 .info li{
@@ -103,8 +111,9 @@ header {
     margin-top: 20px;
 }
 
-.info-complementaria{
-padding: 35px 20px;
+.info-complementaria {
+    width: 100%;
+    height: auto;
 }
 
 .Bullets{
@@ -113,13 +122,11 @@ padding: 35px 20px;
     color: white;
 } 
 
-.Bullets h3{
-    margin-top: 16;    
-}
-
 .Contenedor-Tarjetas {
-color: white;
-display: flex;
+    color: #F1F1F1;
+    display: flex;
+    position: relative;
+    margin-top: 85px;
 }
 
 .Tarjeta {
@@ -128,12 +135,23 @@ display: flex;
     padding: 20px;
     flex: 1;
     position: relative;
+    box-sizing: border-box;
+}
+
+.Tarjeta h4{
+    font-size: 20;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
 .Tarjeta img {
     width: auto;
     height: 30px;
-    padding: 0;
+    padding-bottom: 16px;
+}
+
+.Tarjeta p {
+    font-size: 17px;
 }
 
 /* Estilo para las líneas verticales */
@@ -141,22 +159,23 @@ display: flex;
     content: '';
     position: absolute;
     top: 0;
-    left: 330px;
+    right: -20; /* Línea en el borde derecho de la tarjeta */
     width: 0.3px; /* Grosor de la línea */
     height: 100%;    
-    justify-content: center; /* Centra verticalmente el contenido */
     background-color: rgba(255, 255, 255, 0.301); /* Color de la línea */
 }
 
 .Comunidad{
-padding: 60px 133px;
-background-color: white;
-color: #161616;
+    padding: 60px 133px;
+    background-color: white;
+    color: #161616;
 }
 
 .contenedor-comentarios {
     columns: 2;
     column-gap: 107px; /* Espacio entre columnas */
+    margin-top: 83px;
+
 }
 
 .comentario {
@@ -169,35 +188,25 @@ color: #161616;
 
 .foto-coment img {
     width: 80px;
-    height: 80px;
+    height: auto;
     margin-right: 16px;
 }
 
 .name-tittle {
-    margin: 0;
-    padding: 0;
     display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.name-tittle h3 {
-    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 10px;
 }
 
 .img-puntaje {
-    width: 27px;
-    height: 27px;
+    width: 30px;
     margin-left: 10px;
 }
 
 .coment-text {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .coment-text p{
-    font-family: "DM Sans", sans-serif;
     font-size: 17px;
 }
 
@@ -208,15 +217,14 @@ color: #161616;
 .fecha-hora p {
     margin-top: 0;
     margin-bottom: 0;
-    color: black;
+    color: #11111181;
     font-size: 11px;
-    font-weight: normal;
     font-family: "Roboto Condensed", sans-serif;
 }
 
 .fecha-hora img {
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
     margin-right: 6px;
     margin-left: 0;
 }
@@ -235,8 +243,8 @@ color: #161616;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.897)), url('imagen/Joystick.png');  
     background-size: cover;
     background-position: center;
+    color: #F1F1F1;
     height: auto;
-    color: white;
 } 
 
 .form-conten{
@@ -245,12 +253,12 @@ color: #161616;
 }
 
 .titulo-form{
-    height: auto;
+    font-size: 40px;
 }
 
 .form-group{
-    margin-top: 22px;
-    margin-bottom: 20px;
+    margin: 22px 0;
+
 }
 
 #email {
@@ -259,6 +267,7 @@ color: #161616;
     border: 1px solid #ccc;
     border-radius: 50px;
     font-size: 20px;
+    background-color: #F1F1F1;
     font-family: "DM Sans", sans-serif;
 }
 
@@ -269,40 +278,258 @@ input[type="email"] {
 
 footer {
     background-color: #161616;
-    color: white;
+    color: #F1F1F1;
     text-align: center; /* Centra el texto */
-    padding: 40px 0 5px; /* Ajusta el padding */
+    padding: 40px 0 10px; /* Ajusta el padding */
 }
 
 .medios {
+    margin-bottom: 30px;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
 }
 
-.medios p {
+.medios h3 {
     font-size: 30px;
-    font-weight: bold;
-    font-family: "Roboto Condensed", sans-serif;
 }
 
 .icons {
     display: flex;
-    gap: 45px; /* Espacio entre iconos */
-    padding-left: 30px;
 }
 
 .icon-media {
     width: 40px;
+    margin-left: 45px;
     height: auto; /* Mantener la proporción */
 }
 
-
-h1, h2, h4, h5, h6 {
-    font-family: "Roboto Condensed", sans-serif;    
-    font-weight: bold;
-}
-
-/* @media screen and (max-width: 600px) { ESTO ES PARA HACER RESPONSIVE UN SITIO, EJERCICIO 2 EXPLICA
-    html, body{
+@media screen and (max-width: 500px) {
+    h2{
+        font-size: 25px;  
+        text-align: center;
     }
+    
+    h3{
+        font-size: 20px;   
+    }
+
+    header {
+        padding: 16px 15px; /*Espadio arriba, abajo y a los costados (interno)*/
+        height: 5%;
+    }
+    
+    .logo {
+        max-width: 102px;
+    }
+    
+    .portada {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0)), url('imagen/Joystick.png');  
+        height: 55vh;
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .encabezado{
+        text-align: left; /* Centra el texto */
+        margin: 50px 16px;
+    }
+    
+    .titulos-encabezado h1{
+        font-size: 30px;
+    }
+    
+    .titulos-encabezado p{
+        color: #C9CACC;
+        margin: 20px 0 30px;
+        font-size: 15px;
+    }
+      
+    .boton-rojo{
+        padding: 10px 120px;
+        font-size: 20px;     
+    }    
+    
+    .Beneficios{
+        display: block;
+        padding: 30px 16px;
+    }
+    
+    .info{
+        margin-right: 0;
+    }
+    
+    .info ul{
+        font-size: 15px;
+        margin-top: 20px;
+    }     
+    
+    .Bullets{
+        padding: 30px 16px;
+    } 
+    
+    .Contenedor-Tarjetas {
+        display: block;
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .Tarjeta {
+        margin: 0;
+        padding: 40px;
+        flex: 1;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .Tarjeta h4{
+        font-size: 20;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .Tarjeta img {
+        width: auto;
+        height: 35px;
+        padding-bottom: 15px;
+    }
+    
+    .Tarjeta p {
+        font-size: 17px;
+    }
+    
+    /* Estilo para las líneas verticales */
+    .Tarjeta:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 250;
+        right: 20; /* Línea en el borde derecho de la tarjeta */
+        width: 90%; /* Grosor de la línea */
+        height: 0.3px;    
+        background-color: rgba(255, 255, 255, 0.301); /* Color de la línea */
+    }
+    
+    .Comunidad{
+        padding: 30px 16px;
+
+    }
+    
+    .contenedor-comentarios {
+        columns: 1;
+        column-gap: 0; /* Espacio entre columnas */
+        margin-top: 20px;
+    
+    }
+    
+    .comentario {
+        display: flex;
+        width: 325px;
+        height: auto;
+        margin-bottom: 30px;
+        position: relative; /* Añadir position: relative */
+    }
+    
+    .foto-coment img {
+        width: 60px;
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .name-tittle {
+        display: flex;
+        margin-bottom: 7px;
+    }
+    
+    .img-puntaje {
+        width: 20px;
+        height: 20px;
+        margin-left: 7px;
+    }
+    
+    .coment-text {
+        margin-bottom: 7px;
+    }
+    
+    .coment-text p{
+        font-size: 15px;
+    }
+    
+    .fecha-hora p {
+        font-size: 8px;
+    }
+    
+    .fecha-hora img {
+        width: 8px;
+        height: 8px;
+        margin-right: 6px;
+        margin-left: 0;
+    }
+    
+    .comentario::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px; /* Ajusta esta propiedad para espaciar la línea */
+        width: 100%;
+        height: 1px; /* Grosor de la línea */
+        background-color: rgba(0, 0, 0, 0.178); /* Color de la línea */
+    }
+
+    .Formulario{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0)), url('imagen/Joystick.png');  
+    }
+    
+    .form-conten{
+        text-align: center;
+        padding: 30px 16px;
+    }
+
+    .titulo-form{
+        font-size: 35px;
+    }
+    
+    .form-group{
+        margin: 20px 0;    
+    }
+    
+    #email {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 15px;
+    }
+    
+    input[type="email"] {
+        padding: 10px;
+        margin-right: 10px; /* Espacio entre el input y el botón */
+    }
+    
+    footer {
+        text-align: center; /* Centra el texto */
+        padding: 20px 53px 10px; /* Ajusta el padding */
+    }
+    
+    .medios {
+        margin-bottom: 30px;
+        display: block;
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+    }
+    
+    .medios h3 {
+        font-size: 20px;
+    }
+
+    .icons {
+        margin-top: 20px;
+    }
+
+    .icon-media {
+        width: 30px;
+        margin-left: 0;
+        margin: 0 20px;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+}
